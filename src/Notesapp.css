@@ -1,0 +1,103 @@
+.note-container{
+max-width: 600px;
+width: 100%;
+margin: 30px auto;
+padding: 20px;
+font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+notes-container h2{
+    text-align: center;
+    color: #333;
+}
+
+.note-form{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.note-form input{
+    padding: 10px;
+    font-size: 16px;
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.note-form button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.note-form button:hover{
+    background-color: #0056b3;
+}
+
+.note-card{
+    background-color: white;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.note-card:hover{
+    box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+
+.note-card h3{
+    margin: 0 0 5px;
+    color:#555;
+}
+
+.note-card p{
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.note-card button{
+    margin-right: 10px;
+    padding: 5px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note-card button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+.note-card button:first-of-type:hover {
+  background-color: #218838;
+}
+
+.note-card button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+.note-card button:last-of-type:hover {
+  background-color: #c82333;
+}
+
+.note-card input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
