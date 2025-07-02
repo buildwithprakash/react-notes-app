@@ -10,8 +10,14 @@ const [editContent,setEditContent]=useState('');
 
 
 const fetchNotes=async ()=>{
+    const user=JSON.parse(localStorage.getItem("user"));
+   
+   if(!user || !user.id){
+    console.log("User not logged in.");
+    return;
+   }
     try {
-        const response=await fetch("http://localhost:4798/api/notes");
+        const response=await fetch(`http://localhost:4798/api/notes?userId=${user.id}`);
         const data=await response.json();
         setNotes(data);
     } catch (error) {
@@ -26,8 +32,15 @@ const addNote=async(e)=>{
         return;
     }
 
-
-const newNOte={title,content};
+const user=JSON.parse(localStorage.getItem("user"));
+if(!user || !user.id)
+{
+    alert("User not Logged in");
+    return;
+}
+const newNOte={title,content,
+    user:{id:user.id}
+};
 
 try {
     const response=await fetch("http://localhost:4798/api/notes",{

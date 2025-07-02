@@ -7,6 +7,7 @@ const navigate=useNavigate();
 
   const handleLogout=()=>{
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("user");
     navigate("/login");
   }
   return (
@@ -23,7 +24,7 @@ const navigate=useNavigate();
           </>
         ):(
           <>
-          <Link to='notesapp'>Notes</Link>
+          <Link to='/notesapp'>Notes</Link>
           <button className='logout-btn' onClick={handleLogout}>logout</button>
           </>
         )}

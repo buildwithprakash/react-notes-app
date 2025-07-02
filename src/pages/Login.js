@@ -29,15 +29,18 @@ const handleLogin=async(e)=>{
       },
       body:JSON.stringify(data)
     });
-
+ 
 
     if(!response.ok)
     {
       throw new Error("Network response was not ok")
+        
+    
     }
     const result=await response.json();
     console.log("user detail",result);
     alert("Login Successfull");
+    localStorage.setItem("user",JSON.stringify(result));
     localStorage.setItem("isLoggedIn","true");
     navigate('/notesapp');
 
